@@ -1,0 +1,4 @@
+sample.jpg
+sample.gng
+
+размером 100*100
