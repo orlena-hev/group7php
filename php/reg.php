@@ -1,6 +1,6 @@
 <div id="content_inner">
   
-          <form    action="reg.php"   method="post" name="main" onsubmit="">
+          <form action="reg.php" method="POST" name="main" enctype="multipart/form-data" onsubmit="">
     <table bgcolor="#dddddd">
     <tr>
       <th colspan="2" align="center">Регистрация нового пользователя</th>
@@ -148,7 +148,8 @@
       </td>
     </tr>
   </table>
+</form>  
   <form enctype="multipart/form-data" method="post">
-<input type="file" name="file" multiple accept="image/jpeg,image/png">
+        <input type="file" name="file" multiple accept="image/jpeg,image/png">
   </form>
       </div>

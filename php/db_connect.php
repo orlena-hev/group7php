@@ -1,6 +1,7 @@
 <?php
-$db = mysql_connect("localhost","group7","php"); // or die ("Нет подключения к серверу!");
+$db = mysql_connect("localhost","root",""); // or die ("Нет подключения к серверу!");
 //$db = mysql_connect('127.0.0.1:801','root',''); // or die ("Нет подключения к серверу!");
+//$db = mysql_connect("localhost","group7","php"); // or die ("Нет подключения к серверу!");
 
 if (mysqli_connect_errno()) {
    echo "не подключились к серверу MySQL: " . mysqli_connect_error();

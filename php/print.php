@@ -1,8 +1,11 @@
 <?php 
 
-    if (!empty($_POST['fupload'])) //проверяем, отправил ли пользователь изображение
+    print_r($_FILES); 
+    echo($_POST['file']);
+
+    if (!empty($_POST['file'])) //проверяем, отправил ли пользователь изображение
 {
-$fupload=$_POST['fupload']; 
+$fupload=$_POST['file']; 
 $fupload = trim($fupload); 
   if ($fupload =='' or empty($fupload)) {
                      unset($fupload);// если переменная $fupload пуста, то удаляем ее
@@ -19,11 +22,11 @@ else
 //иначе - загружаем изображение пользователя
 $path_to_100 = 'images/avatars/';//папка, куда будет загружаться начальная картинка и ее сжатая копия
 
-if(preg_match('/[.](JPG)|(jpg)|(gif)|(GIF)|(png)|(PNG)$/',$_FILES['fupload']['name']))//проверка формата исходного изображения
+if(preg_match('/[.](JPG)|(jpg)|(gif)|(GIF)|(png)|(PNG)$/',$_FILES['file']['name']))//проверка формата исходного изображения
 	 {	
 	 	 	
-		$filename = $_FILES['fupload']['name'];
-		$source = $_FILES['fupload']['tmp_name'];	
+		$filename = $_FILES['file']['name'];
+		$source = $_FILES['file']['tmp_name'];	
 		$target = $path_to_100.$filename;
 		move_uploaded_file($source, $target);//загрузка оригинала в папку $path_to_100
 
@@ -89,5 +92,4 @@ else
 //конец процесса загрузки и присвоения переменной $avatar адреса загруженной авы
 
 }
-    print_r($_FILES); 
 ?>
