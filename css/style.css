@@ -1,0 +1,172 @@
+﻿/* Designed by LernVid.com */
+html {
+	overflow-y: scroll;
+}
+body {
+	font-size:14px;
+	font-family:Verdana;
+	color: #505050;
+	background-image: url('../images/bg.gif');
+	background-repeat:repeat-x;
+	margin:0;
+	padding:0;
+}
+#wrapper { 
+    width: 980px; 
+    min-height:600px;
+    margin: 0 auto 5px; 
+    background: #eee; 
+    padding: 8px;
+	background-image: url('../images/wrapper.gif');
+	background-repeat:repeat-y;
+	background-position:center top;
+    -moz-border-radius: 14px;
+    -webkit-border-radius: 14px;
+	border-radius: 14px;
+	border: 1px solid #ccc;
+}
+#logo {
+    width: 980px; 
+    height: 150px;
+    margin:0 auto;
+    display:block;
+	background-image: url('../images/logo.png');
+	background-repeat: no-repeat;
+}
+a#logo {
+	text-decoration:none;
+}
+#logo h1 {
+	margin:0;
+	padding: 50px 0 0 0;
+	color: #999;
+	text-shadow: -1px -1px 1px #000;
+	text-align:right;
+}
+#navi {
+    background-color: #f9f9f9; 
+	padding: 0;
+	margin:0;
+	background-image: url('../images/navi.gif');
+	background-repeat:repeat-y;
+	background-position:center top;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+}
+#navi ul { 
+    list-style: none; 
+    width: 97.8%; 
+	padding: 1% 1% 0 1%;
+	margin: 0;
+}
+#navi ul li { 
+	display: inline-block;
+	margin: 0 0 1% 0;
+	padding:0; 
+}
+#navi ul li a {
+	display: block;
+	font-weight:bold;
+	color: #999;
+	float: left;
+	background-color: #eee;
+	height: 27px;
+	line-height: 27px;
+	padding: 0 20px;
+	margin: 0;
+	text-decoration: none; 
+	background-image: url('../images/navia.gif');
+	background-repeat:repeat-x;
+	text-shadow: 0 1px 0 #fff;
+	border-top: 1px solid #e9e9e9;
+	border-left: 1px solid #e9e9e9;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+    -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+	border-radius: 7px;
+}
+#navi ul li a:hover {
+	color: #666;
+	background-color: #ddd;
+	border-top: 1px solid #e9e9e9;
+	border-left: 1px solid #e9e9e9;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background-image: url('../images/navia.gif');
+	background-repeat:repeat-x;
+	background-position: 0 -27px;
+}	
+#navi ul li a:active, #navi ul li a.current {
+	color: #000;
+	background: #ddd;
+	border-top: 1px solid #ddd;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	background-image: url('../images/navia.gif');
+	background-repeat:repeat-x;
+	background-position: 0 -27px;
+}
+#navi ul li a:active:hover, #navi ul li a.current:hover {
+	color: #999;
+}
+
+.links:after { 
+	visibility: hidden; 
+	display: block; 
+	font-size: 0;
+	clear: both;
+	height: 0; 
+	content: " ";
+}
+.links { 
+	display: inline-block; 
+	clear: both; 
+}
+
+#content {
+	padding: 15px; 
+}
+h2.title {
+	padding: 0 0 5px 0;
+	border-bottom: 1px dotted #aaa;
+}
+p { 
+	margin: 0 0 15px 0; 
+}
+
+#footer { 
+	color: #ccc; 
+    width: 980px; 
+    margin: 0 auto 12px;; 
+    padding:0;
+	text-align:right; 
+	font-size:9px;
+}
+#footerlinks {
+	width: auto;
+	float:left;
+}
+#footer a {	color: #ccc;}
+#footer a:hover {color: #aaa;}
+a {
+	color: #000;
+}
+
+a, object, img {
+	outline: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 1px 0 #fff;
+}
+blockquote {
+	background:#fff;
+	border: 1px solid #ccc;
+	padding: 10px;
+    -moz-border-radius: 14px;
+    -webkit-border-radius: 14px;
+	border-radius: 14px;
+}
