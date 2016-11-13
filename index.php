@@ -23,6 +23,7 @@
 					<li><a href="downloads.html">Downloads</a></li>
 					<li><a href="team.html">Team</a></li>
 					<li><a href="contact.html">Contact</a></li>
+          <li><a href="tabpic.html">Avatars</a></li>
 				</ul>
 			</div>
 		</div>
@@ -51,6 +52,7 @@
             	  case '1':
             		// 1 - роль администратора
             		echo "<a href='http://phpstart.com:90/admin'>Зона администратора<br></a>";
+                echo "<a href='http://phpstart.com:90/tabpic.php'>Аватарки<br></a>";
             		break;
             	  case '2':
             		// 2 - роль модератора

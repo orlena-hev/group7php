@@ -6,7 +6,7 @@ $ip = getenv("HTTP_X_FORWARDED_FOR");
 
 if (empty($ip) || $ip == 'unknown') {
   $ip = getenv("REMOTE_ADDR"); //извлекаем айпи
-  echo $ip;
+  //echo $ip;
   $usercol = mysql_query("SELECT col from ip where ip ='$ip'",$db);
   $userip= mysql_fetch_array($usercol);
   if ($userip['col'] > 2) {
@@ -44,7 +44,7 @@ else {
         }
         else {
             echo "<br>Проверьте правильность логина и пароля. Или зарегистрируйтесь.<br>";
-            echo "$md5";
+            //echo "$md5";
             //если пользователь с введенным логином и паролем не существует то делаем запись
             $select = mysql_query("SELECT * from ip WHERE ip = '$ip'");
             $user_row = mysql_fetch_array($select);
