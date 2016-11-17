@@ -1,3 +1,9 @@
+<?php
+    //Стартуем сессии
+session_start();
+header('Content-Type: text/html; charset=utf-8');
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,14 +39,31 @@
       <?php 
         include_once("php/auth.php");
       ?>
-      <br>
-      
-      <input type="text" name="login">
+     
+<?php
+// Проверяем, пуста ли переменная логина 
+    if (empty($_SESSION['login']))
+    {
+?>
+      <!--Если пусты, то выводим форму входа.--> 
+      <input type="text" name="login" echo value="">   
       <input type="password" name="pas">
       <input type="submit" value="Войти" name="butsub">
       <a href="php/reg.php"><input type="button" value="Зарегистрироваться" name=""></a>
+      <input type="checkbox" checked name="ssave" value = "1">Запомнить
       </form>
+<?php
+}
+    else  //Иначе. 
+    {
+     $login = $_SESSION['login'];
+     //echo $login;
+     echo '<input type="text" name="login" value="'.$login.'">';
+     echo '<input type="password" name="pas"><br>';
+    }
+?>  
       
+
       <?php //session_start();
             $role = $_SESSION['role'];
 
@@ -77,5 +100,6 @@
 		<!-- It's NOT allowed to delete the Backlink to the autor! >>> Infos under: http://lernvid.com/lizenz <<< -->
 		Design by <a  title="Templates" href="http://www.lernvid.com">LernVid.com</a>
 	</div>
+ 
 </body>
 </html>
