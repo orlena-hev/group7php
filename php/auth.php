@@ -36,17 +36,6 @@ else {
             $_SESSION['pass'] = $row['password'];
             $_SESSION['id'] = $row['id'];
             $_SESSION['role'] = $row['role'];
-
-            $ssave=$_POST['ssave'];
-            //echo $ssave;
-            if (empty($ssave) == 1) {
-            //Запись кук, для последующих входов
-            setcookie("login", $_POST['login']);
-            setcookie("password", $_POST['pas']);
-            //var_dump($_COOKIE);
-            //echo "<a href='http://phpstart.com:90'></a>";
-            echo '<meta http-equiv="refresh" content="0;URL=http://phpstart.com:90/">';
-            }
         }
         else {
             echo "<br>Проверьте правильность логина и пароля. Или зарегистрируйтесь.<br>";

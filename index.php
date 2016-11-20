@@ -2,6 +2,21 @@
     //Стартуем сессии
 session_start();
 header('Content-Type: text/html; charset=utf-8');
+$login = $_POST['login'];
+$pas = $_POST['pas'];
+$md5 = md5($pas);
+
+if (!empty($_POST['login'])) {
+//Запись кук, для последующих входов
+    $login = $_POST['login'];
+    $pas = md5($_POST['pas']);
+    setcookie("login", $login);
+    setcookie("password", $pas);
+    //echo ($_COOKIE['login']);
+    //echo ($_COOKIE['password']);
+    echo "<a href='http://phpstart.com:90'></a>";
+    //echo '<meta http-equiv="refresh" content="0;URL=http://phpstart.com:90/">';
+} 
 ?>
 
 <!DOCTYPE html>
@@ -56,10 +71,10 @@ header('Content-Type: text/html; charset=utf-8');
 }
     else  //Иначе. 
     {
-     $login = $_SESSION['login'];
+     $login = $_COOKIE['login'];
      //echo $login;
      echo '<input type="text" name="login" value="'.$login.'">';
-     echo '<input type="password" name="pas"><br>';
+     //echo '<input type="password" name="pas"><br>';
     }
 ?>  
       
